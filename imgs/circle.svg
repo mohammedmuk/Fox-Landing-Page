@@ -1,0 +1,6 @@
+<svg version="1.1" id="features_circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="543px" height="542.953px" viewBox="0 0 543 542.953" enable-background="new 0 0 543 542.953" xml:space="preserve">
+    <g>
+         <circle fill="none" stroke="#" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="11.9474,11.9474" cx="271.5" cy="271.516" r="270"></circle>
+         <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="50s" repeatCount="indefinite"></animateTransform>
+    </g>
+ </svg>
