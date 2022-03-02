@@ -18,7 +18,7 @@ gsap.from('.features .container .title', {duration: 1, opacity:0, scrollTrigger:
 
 gsap.from('.features .img-box img', {duration:1,delay:.2, y:100, opacity:0, scrollTrigger: '.features .img-box img'})
 
-gsap.from('.features .img-box svg', {duration:1, scale:0, delay: .4, scrollTrigger: '.features .img-box img'})
+gsap.from('.features .img-box svg', {duration:1, scale:0, delay: .4, scrollTrigger: '.features .img-box svg'})
 
 gsap.from('.features .text-box:first-of-type .i1', {duration:.5, delay:1.5, x:50, opacity:0, scrollTrigger: '.features .img-box img' })
 
@@ -100,6 +100,14 @@ let main = Array.from(document.querySelectorAll('.mains')),
     theLi = document.querySelectorAll('.home header ul li');
 
 menuActive()
+
+
+// switcher color menu
+
+let switcherColor = document.querySelector('.switcher-color'),
+    iconColor = document.querySelector('.switcher-color .icon-box');
+iconColor.onclick = () => switcherColor.classList.toggle('show')
+
 
 let statusNumber = false,
     factsContainer = document.querySelector('.facts'),

@@ -221,6 +221,11 @@ a {
 .switcher-color .gradinet-color .column2 li:nth-of-type(5){
  background: linear-gradient(90deg, rgb(39, 77, 90) 50%, rgb(61, 130, 121) 120%);
 }
+@media (max-width: 768px){
+  .switcher-color{
+    top: 20%;
+  }
+}
 /* End Main */
 
 /* Start Home */
