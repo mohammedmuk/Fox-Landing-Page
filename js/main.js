@@ -278,6 +278,8 @@ function start() {
   });
 }
 
+let navBar = document.querySelector(".home header");
+
 window.addEventListener("load", () => start());
 
 // Toogle Menu
@@ -368,17 +370,17 @@ function menuActive() {
 }
 
 function navMenu() {
-  let navBar = document.querySelector(".home header");
-
-  if (window.scrollY > 200) {
-    navBar.style.opacity = 0;
-    navBar.style.position = "fixed";
-  }
-  if (window.scrollY > 800) {
-    navBar.style.animationName = "drop-down";
-  } else {
-    navBar.style.animationName = "drop-up";
-    navBar.style.position = "absolute";
+  if (window.innerWidth > 992) {
+    if (window.scrollY > 200) {
+      navBar.style.opacity = 0;
+      navBar.style.position = "fixed";
+    }
+    if (window.scrollY > 800) {
+      navBar.style.animationName = "drop-down";
+    } else {
+      navBar.style.animationName = "drop-up";
+      navBar.style.position = "absolute";
+    }
   }
 }
 
