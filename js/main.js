@@ -1,223 +1,408 @@
-
-
 // Gsap Code
 
-function start(){
+function start() {
+  gsap.registerPlugin(ScrollTrigger);
 
-gsap.registerPlugin(ScrollTrigger);
+  gsap.from(".last-home .last", {
+    duration: 1,
+    stagger: 0.2,
+    y: 200,
+    ease: "back",
+    opacity: 0,
+    scrollTrigger: ".last",
+  });
 
-gsap.from('.last-home .last', {duration: 1, stagger: .2, y:200, ease: 'back', opacity: 0, scrollTrigger: '.last'})
+  gsap.from(".about .img-box img", {
+    duration: 1,
+    x: -150,
+    opacity: 0,
+    scrollTrigger: ".img",
+  });
 
-gsap.from('.about .img-box img', {duration:1, x: -150, opacity: 0, scrollTrigger: '.img' })
+  gsap.from(".about .text", {
+    duration: 0.5,
+    delay: 0.5,
+    opacity: 0,
+    scale: 0.5,
+    scrollTrigger: ".text",
+  });
 
-gsap.from('.about .text',{duration:.5,delay: .5,opacity:0, scale:0.5, scrollTrigger: '.text' })
+  gsap.from(".about .icon-box .icon", {
+    duration: 0.5,
+    delay: 1.3,
+    opacity: 0,
+    scale: 0.5,
+    stagger: 0.3,
+    scrollTrigger: ".text",
+  });
 
-gsap.from('.about .icon-box .icon', {duration:.5, delay:1.3,opacity:0, scale:0.5, stagger:.3 , scrollTrigger: '.text' })
+  gsap.from(".features .container .title", {
+    duration: 1,
+    opacity: 0,
+    scrollTrigger: ".features .container .title",
+  });
 
-gsap.from('.features .container .title', {duration: 1, opacity:0, scrollTrigger: '.features .container .title'})
+  gsap.from(".features .img-box img", {
+    duration: 1,
+    delay: 0.2,
+    y: 100,
+    opacity: 0,
+    scrollTrigger: ".features .img-box img",
+  });
 
-gsap.from('.features .img-box img', {duration:1,delay:.2, y:100, opacity:0, scrollTrigger: '.features .img-box img'})
+  gsap.from(".features .img-box svg", {
+    duration: 1,
+    scale: 0,
+    delay: 0.4,
+    scrollTrigger: ".features .img-box svg",
+  });
 
-gsap.from('.features .img-box svg', {duration:1, scale:0, delay: .4, scrollTrigger: '.features .img-box svg'})
+  gsap.from(".features .text-box:first-of-type .i1", {
+    duration: 0.5,
+    delay: 1.5,
+    x: 50,
+    opacity: 0,
+    scrollTrigger: ".features .img-box img",
+  });
 
-gsap.from('.features .text-box:first-of-type .i1', {duration:.5, delay:1.5, x:50, opacity:0, scrollTrigger: '.features .img-box img' })
+  gsap.from(".features .text-box:last-of-type .i1", {
+    duration: 0.5,
+    delay: 1.5,
+    x: -50,
+    opacity: 0,
+    scrollTrigger: ".features .img-box img",
+  });
 
-gsap.from('.features .text-box:last-of-type .i1', {duration:.5, delay:1.5, x:-50, opacity:0, scrollTrigger: '.features .img-box img' })
+  gsap.from(".features .text-box:first-of-type .i2", {
+    duration: 0.5,
+    delay: 2,
+    x: 50,
+    opacity: 0,
+    scrollTrigger: ".features .img-box img",
+  });
 
-gsap.from('.features .text-box:first-of-type .i2', {duration:.5, delay:2, x:50, opacity:0, scrollTrigger: '.features .img-box img' })
+  gsap.from(".features .text-box:last-of-type .i2", {
+    duration: 0.5,
+    delay: 2,
+    x: -50,
+    opacity: 0,
+    scrollTrigger: ".features .img-box img",
+  });
 
-gsap.from('.features .text-box:last-of-type .i2', {duration:.5, delay:2, x:-50, opacity:0, scrollTrigger: '.features .img-box img' })
+  gsap.from(".features .text-box:first-of-type .i3", {
+    duration: 0.5,
+    delay: 2.5,
+    x: 50,
+    opacity: 0,
+    scrollTrigger: ".features .img-box img",
+  });
 
-gsap.from('.features .text-box:first-of-type .i3', {duration:.5, delay:2.5, x:50, opacity:0, scrollTrigger: '.features .img-box img' })
+  gsap.from(".features .text-box:last-of-type .i3", {
+    duration: 0.5,
+    delay: 2.5,
+    x: -50,
+    opacity: 0,
+    scrollTrigger: ".features .img-box img",
+  });
 
-gsap.from('.features .text-box:last-of-type .i3', {duration:.5, delay:2.5, x:-50, opacity:0, scrollTrigger: '.features .img-box img' })
+  gsap.from(".awesome .title", {
+    duration: 1,
+    opacity: 0,
+    scrollTrigger: ".features .awesome .title",
+  });
 
-gsap.from('.awesome .title', {duration: 1, opacity:0, scrollTrigger: '.features .awesome .title'})
+  gsap.from(".awesome .metro", {
+    duration: 0.5,
+    delay: 0.5,
+    y: 100,
+    opacity: 0,
+    scrollTrigger: ".metro",
+  });
 
-gsap.from('.awesome .metro', {duration: .5, delay:.5 , y:100, opacity: 0, scrollTrigger: '.metro'})
+  gsap.from(".screenshots .screen .title", {
+    duration: 1,
+    opacity: 0,
+    scrollTrigger: ".screen .title",
+  });
 
-gsap.from('.video section .title', {duration:1, opacity: 1, scrollTrigger: '.video section .title'})
+  gsap.from(".screenshots .screen section", {
+    duration: 0.5,
+    delay: 0.5,
+    y: 100,
+    opacity: 0,
+    scrollTrigger: ".screenshots section",
+  });
 
-gsap.from('.video .video-box', {duration:1, opacity:0, y:50, scrollTrigger: '.video .video-box'})
+  gsap.from(".screenshots .facts .title", {
+    duration: 1,
+    opacity: 0,
+    scrollTrigger: ".facts .title",
+  });
 
-gsap.from('.screenshots .screen .title', {duration:1, opacity:0, scrollTrigger: '.screen .title'})
+  gsap.from(".screenshots .facts .icon-box", {
+    duration: 1,
+    delay: 1,
+    y: 50,
+    opacity: 0,
+    stagger: 0.5,
+    scrollTrigger: ".facts",
+  });
 
-gsap.from('.screenshots .screen section', {duration: .5, delay:.5 , y:100, opacity: 0 , scrollTrigger: '.screenshots section'})
+  gsap.from(".price .title", {
+    duration: 1,
+    opacity: 0,
+    scrollTrigger: ".price .title",
+  });
 
-gsap.from('.screenshots .facts .title', {duration:1, opacity:0, scrollTrigger: '.facts .title'})
+  gsap.from(".price .c1", {
+    duration: 0.5,
+    x: -100,
+    delay: 0.5,
+    opacity: 0,
+    scrollTrigger: ".price section",
+  });
 
-gsap.from('.screenshots .facts .icon-box', {duration:1,delay: 1, y:50, opacity:0,stagger:.5, scrollTrigger: '.facts'})
+  gsap.from(".price .c2", {
+    duration: 0.5,
+    y: 50,
+    delay: 1,
+    opacity: 0,
+    scrollTrigger: ".price section",
+  });
 
-gsap.from('.price .title', {duration:1, opacity: 0, scrollTrigger: '.price .title'})
+  gsap.from(".price .c3", {
+    duration: 0.5,
+    x: 100,
+    delay: 1.5,
+    opacity: 0,
+    scrollTrigger: ".price section",
+  });
 
-gsap.from('.price .c1', {duration:.5, x:-100,delay:.5, opacity:0, scrollTrigger: '.price section'})
+  gsap.from(".team .title", {
+    duration: 1.5,
+    opacity: 0,
+    scrollTrigger: ".team .title",
+  });
 
-gsap.from('.price .c2', {duration:.5, y:50,delay:1, opacity:0, scrollTrigger: '.price section'})
+  gsap.from(".team .icon-box", {
+    duration: 0.5,
+    y: 100,
+    opacity: 0,
+    scrollTrigger: ".team .icon-box",
+  });
 
-gsap.from('.price .c3', {duration:.5, x:100,delay:1.5, opacity:0, scrollTrigger: '.price section'})
+  gsap.from(".faq .title", {
+    duration: 1.5,
+    opacity: 0,
+    scrollTrigger: ".faq",
+  });
 
-gsap.from('.team .title', {duration:1.5,opacity:0, scrollTrigger:'.team .title'})
+  gsap.from(".faq .text-box", {
+    duration: 0.5,
+    delay: 0.2,
+    x: -100,
+    opacity: 0,
+    scrollTrigger: ".faq .text-box",
+  });
 
-gsap.from('.team .icon-box', {duration:.5, y:100, opacity:0, scrollTrigger:'.team .icon-box'})
+  gsap.from(".faq .img-box", {
+    duration: 0.5,
+    delay: 0.5,
+    x: 100,
+    opacity: 0,
+    scrollTrigger: ".faq .text-box",
+  });
 
-gsap.from('.faq .title', {duration:1.5, opacity:0, scrollTrigger: '.faq'})
+  gsap.from(".news .title", {
+    duration: 1,
+    opacity: 0,
+    scrollTrigger: ".news .title",
+  });
 
-gsap.from('.faq .text-box', {duration:.5,delay:.2, x:-100, opacity:0, scrollTrigger: '.faq .text-box'})
+  gsap.from(".news .container", {
+    duration: 0.5,
+    y: 100,
+    opacity: 0,
+    scrollTrigger: ".news .container",
+  });
 
-gsap.from('.faq .img-box', {duration:.5,delay:.5, x:100, opacity:0, scrollTrigger: '.faq .text-box'})
+  gsap.from(".download .text-box", {
+    duration: 0.5,
+    x: -100,
+    opacity: 0,
+    scrollTrigger: ".download .text-box",
+  });
 
-gsap.from('.news .title', {duration:1, opacity:0, scrollTrigger: '.news .title'})
+  gsap.from(".download .img-box", {
+    duration: 0.5,
+    delay: 0.5,
+    x: 100,
+    opacity: 0,
+    scrollTrigger: ".download .text-box",
+  });
 
-gsap.from('.news .container',{duration: .5, y:100, opacity:0, scrollTrigger: '.news .container'})
+  gsap.from(".git .title", {
+    duration: 1,
+    opacity: 0,
+    scrollTrigger: ".git .title",
+  });
 
-gsap.from('.download .text-box', {duration:.5, x:-100, opacity:0, scrollTrigger: '.download .text-box'})
+  gsap.from(".git form", {
+    duration: 1,
+    y: 100,
+    opacity: 0,
+    scrollTrigger: ".git form",
+  });
 
-gsap.from('.download .img-box', {duration:.5,delay:.5,x:100, opacity:0, scrollTrigger: '.download .text-box'})
+  gsap.from(".git .icons-box .c1", {
+    duration: 0.5,
+    x: -100,
+    opacity: 0,
+    scrollTrigger: ".icons-box .c1",
+  });
 
-gsap.from('.git .title', {duration:1, opacity:0, scrollTrigger: '.git .title'})
+  gsap.from(".git .icons-box .c2", {
+    duration: 0.5,
+    delay: 0.5,
+    y: 100,
+    opacity: 0,
+    scrollTrigger: ".icons-box .c1",
+  });
 
-gsap.from('.git form', {duration:1, y:100, opacity:0, scrollTrigger: '.git form'})
-
-gsap.from('.git .icons-box .c1', {duration:.5, x:-100, opacity:0, scrollTrigger: '.icons-box .c1'})
-
-gsap.from('.git .icons-box .c2', {duration:.5,delay:.5, y:100, opacity:0, scrollTrigger: '.icons-box .c1'})
-
-gsap.from('.git .icons-box .c3', {duration:.5,delay: 1, x:100, opacity:0, scrollTrigger: '.icons-box .c1'})
+  gsap.from(".git .icons-box .c3", {
+    duration: 0.5,
+    delay: 1,
+    x: 100,
+    opacity: 0,
+    scrollTrigger: ".icons-box .c1",
+  });
 }
 
-window.addEventListener('load', () => start() )
-
+window.addEventListener("load", () => start());
 
 // Toogle Menu
- 
-let menu = document.querySelector('.home header i'),
-    listMenu = document.querySelector('.home .container > ul');
-menu.onclick = _ => listMenu.classList.toggle('drop')
+
+let menu = document.querySelector(".home header i"),
+  listMenu = document.querySelector(".home .container > ul");
+menu.onclick = (_) => listMenu.classList.toggle("drop");
 
 // Fiexd Menu
 
-let main = Array.from(document.querySelectorAll('.mains')),
-    theLi = document.querySelectorAll('.home header ul li');
+let main = Array.from(document.querySelectorAll(".mains")),
+  theLi = document.querySelectorAll(".home header ul li");
 
-menuActive()
-
+menuActive();
 
 // switcher color menu
 
-let switcherColor = document.querySelector('.switcher-color'),
-    iconColor = document.querySelector('.switcher-color .icon-box');
-iconColor.onclick = () => switcherColor.classList.toggle('show')
-
+let switcherColor = document.querySelector(".switcher-color"),
+  iconColor = document.querySelector(".switcher-color .icon-box");
+iconColor.onclick = () => switcherColor.classList.toggle("show");
 
 let statusNumber = false,
-    factsContainer = document.querySelector('.facts'),
-    facts = document.querySelectorAll('.facts .icon-box h2');
+  factsContainer = document.querySelector(".facts"),
+  facts = document.querySelectorAll(".facts .icon-box h2");
 
 // Window onscroll
 
-window.addEventListener('scroll', () => { 
-     navMenu() 
-     menuActive() 
+window.addEventListener("scroll", () => {
+  navMenu();
+  menuActive();
 
-   if (window.scrollY >= factsContainer.offsetTop){
-    if(!statusNumber){
-        increaseNumber()
+  if (window.scrollY >= factsContainer.offsetTop) {
+    if (!statusNumber) {
+      increaseNumber();
     }
-    statusNumber = true
-   }
-    })
+    statusNumber = true;
+  }
+});
 
 // Start Video Effect
 
-let video = document.querySelector('.video .video-box i');
+let video = document.querySelector(".video .video-box i");
 
 video.onclick = () => {
-    let screen = document.createElement('div'),
-        video = document.createElement('video'),
-        close = document.createElement('i');
-    screen.className = 'full-screen';
-    video.src = 'VID-20191107-WA0014.mp4';
-    close.className = 'fas fa-times';
-    video.setAttribute('controls', '')
-    screen.appendChild(video);
-    screen.appendChild(close);
-document.body.appendChild(screen)
-}
+  let screen = document.createElement("div"),
+    video = document.createElement("video"),
+    close = document.createElement("i");
+  screen.className = "full-screen";
+  video.src = "VID-20191107-WA0014.mp4";
+  close.className = "fas fa-times";
+  video.setAttribute("controls", "");
+  screen.appendChild(video);
+  screen.appendChild(close);
+  document.body.appendChild(screen);
+};
 
-document.body.addEventListener('click', (e) =>{
-    if(e.target.classList.contains('fa-times')){
-      e.target.parentElement.remove()
-    }
-})
-
-
+document.body.addEventListener("click", (e) => {
+  if (e.target.classList.contains("fa-times")) {
+    e.target.parentElement.remove();
+  }
+});
 
 // color switcher
 
-let bulletsColor = document.querySelectorAll('.switcher-color li');
+let bulletsColor = document.querySelectorAll(".switcher-color li");
 
-bulletsColor.forEach(bullet => {
-    bullet.onclick = () => {
-      document.documentElement.style.setProperty('--main-bacground-color', bullet.dataset.color)
-    }
-})
+bulletsColor.forEach((bullet) => {
+  bullet.onclick = () => {
+    document.documentElement.style.setProperty(
+      "--main-bacground-color",
+      bullet.dataset.color
+    );
+  };
+});
 
-
-activeClass(document.querySelectorAll('.awesome .icons-box .icon-box'))
-activeClass(document.querySelectorAll('.screenshots .icons-box .icon-box'))
-activeClass(document.querySelectorAll('.team .labels label'))
-activeClass(document.querySelectorAll('.news .labels label'))
-
-
+activeClass(document.querySelectorAll(".awesome .icons-box .icon-box"));
+activeClass(document.querySelectorAll(".screenshots .icons-box .icon-box"));
+activeClass(document.querySelectorAll(".team .labels label"));
+activeClass(document.querySelectorAll(".news .labels label"));
 
 // Functions
 
-
-function menuActive(){
-    let leng = main.length;
-    while(--leng && window.scrollY < main[leng].offsetTop){}
-    theLi.forEach(li => li.classList.remove('active'))
-    theLi[leng].classList.add('active')
+function menuActive() {
+  let leng = main.length;
+  while (--leng && window.scrollY < main[leng].offsetTop) {}
+  theLi.forEach((li) => li.classList.remove("active"));
+  theLi[leng].classList.add("active");
 }
 
-function navMenu(){
-    let  navBar = document.querySelector('.home header');
-    
-    if (window.scrollY > 200){
-        navBar.style.opacity = 0;
-        navBar.style.position = 'fixed'
-    }
-    if(window.scrollY > 800){
-        navBar.style.animationName = 'drop-down'
-    }else{
-        navBar.style.animationName = 'drop-up'
-        navBar.style.position = 'absolute'
-    }
+function navMenu() {
+  let navBar = document.querySelector(".home header");
+
+  if (window.scrollY > 200) {
+    navBar.style.opacity = 0;
+    navBar.style.position = "fixed";
+  }
+  if (window.scrollY > 800) {
+    navBar.style.animationName = "drop-down";
+  } else {
+    navBar.style.animationName = "drop-up";
+    navBar.style.position = "absolute";
+  }
 }
 
+function increaseNumber() {
+  facts.forEach((h2) => {
+    let count = h2.dataset.number;
+    let stop = setInterval(() => {
+      h2.textContent++;
+      if (h2.textContent == count) {
+        h2.textContent = h2.textContent;
 
-function increaseNumber(){
-
-facts.forEach(h2 => {
-    let count = h2.dataset.number
-   let stop = setInterval(() => {
-        h2.textContent++
-    if (h2.textContent == count){
-    h2.textContent = h2.textContent
-
-    clearInterval(stop)
-    }
-    },1)
-})
+        clearInterval(stop);
+      }
+    }, 1);
+  });
 }
 
-function activeClass(section){
-    section.forEach(val => {
-        val.onclick = () => {
-            section.forEach(el => {
-                el.classList.remove('active')
-            })
-        val.classList.add('active')
-        }
-    })
-   }
+function activeClass(section) {
+  section.forEach((val) => {
+    val.onclick = () => {
+      section.forEach((el) => {
+        el.classList.remove("active");
+      });
+      val.classList.add("active");
+    };
+  });
+}
